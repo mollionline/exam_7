@@ -2,5 +2,5 @@ venv
 .idea
 */__pycache__/
 db.sqlite3
-issue_tracker/migrations/__pycache__
+library/migrations/__pycache__
 __pycache__

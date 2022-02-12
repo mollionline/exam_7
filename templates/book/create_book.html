@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h4>Добавить книгу</h4>
+    <form method="POST" action="{% url 'create_book' %}" style="margin-top: 20px; width: 70%;">
+        {% csrf_token %}
+        {% include 'partial/book/form_book.html' with button_text='Создать' %}
+    </form>
+{% endblock %}

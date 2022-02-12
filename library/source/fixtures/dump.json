@@ -1,0 +1,100 @@
+[
+{
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+        "book": "Абай жолы",
+        "description": "",
+        "author": "Мухтар Ауэзов",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 2,
+    "fields": {
+        "book": "Басни",
+        "description": "",
+        "author": "Чехов",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+        "book": "Миры Хайнлайна",
+        "description": "",
+        "author": "Хайнлайн",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 4,
+    "fields": {
+        "book": "Человек в поисках смысла",
+        "description": "",
+        "author": "Виктор Франклин",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 5,
+    "fields": {
+        "book": "Я, робот",
+        "description": "",
+        "author": "Айзек Азимов",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 6,
+    "fields": {
+        "book": "Скотный двор 1894",
+        "description": "",
+        "author": "Джордж Оруэль",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 7,
+    "fields": {
+        "book": "Основание",
+        "description": "",
+        "author": "Айзек Азимов",
+        "published_at": "1897-09-28T06:01:05Z"
+    }
+},
+{
+    "model": "library.book",
+    "pk": 9,
+    "fields": {
+        "book": "Абай жолы 1",
+        "description": "",
+        "author": "Автор 1",
+        "published_at": "2022-02-20T00:00:00Z"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$LoXzViQvMX9lWPMrpRsr2T$1z2qWT4MzSkjgfhs33K6UqTHZTYLruXYfQVD2SCp3eE=",
+        "last_login": "2022-02-12T05:59:02.551Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "auezova.90@mail.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-02-12T05:58:21.937Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

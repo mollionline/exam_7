@@ -1,0 +1,28 @@
+{% csrf_token %}
+<label for="book">Наименование книги</label>
+<input class="form-control {% if form.book.errors %} is-invalid {% endif %}" id="book" type="text" name="book"
+       aria-describedby="book" value="{{ form.book.value|default:'' }}">
+{% for error in form.book.errors %}
+    <p class="invalid-feedback">{{ error }}</p>
+{% endfor %}
+<label for="description">Описание</label>
+<textarea class="form-control" cols="30"
+          rows="10" id="description"
+          name="description">{{ form.description.value|default:'' }}</textarea>
+{% for error in form.description.errors %}
+    <p class="invalid-feedback">{{ error }}</p>
+{% endfor %}
+<label for="author">Автор книги</label>
+<input class="form-control {% if form.author.errors %} is-invalid {% endif %}" id="author" type="text" name="author"
+       aria-describedby="author" value="{{ form.author.value|default:'' }}">
+{% for error in form.author.errors %}
+    <p class="invalid-feedback">{{ error }}</p>
+{% endfor %}
+<div class="card {% if form.published_at.errors %} is-invalid {% endif %}">
+    <label for="published_at">Год издания</label>
+    <input type="date" id='published_at' name="published_at" value="{{ form.published_at.value|date:'Y-m-d'}}">
+</div>
+{% for error in form.published_at.errors %}
+    <p class="invalid-feedback">{{ error }}</p>
+{% endfor %}
+<input type="submit" class="form-control btn btn-secondary" value="{{ button_text }}">
