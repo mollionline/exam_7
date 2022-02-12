@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">Автор: {{ author.author }}</div>
+
+            <p>Биография: {{ author.description }}</p>
+
+
+            {% if author.bithday %}
+                <p>Дата рождения: {{ author.bithday|date:'d.m.Y G:i' }}</p>
+            {% else %}
+                <p>Дата рождения не задано</p>
+            {% endif %}
+            {% if author.death_date %}
+                <p>Дата смерти: {{ author.death_date|date:'d.m.Y G:i' }}</p>
+            {% else %}
+                <p>Дата смерти не задано</p>
+            {% endif %}
+
+            <a class="btn btn-dark" href="{% url 'list_book' %}">Вернуться в список книг </a>
+            <form action="{% url 'create_book' author.pk %}" method="post">
+                {% include 'partial/book/form_book.html' with button_text='Создать' %}
+            </form>
+
+        </div>
+    </div>
+    {% if author.books %}
+        {% include 'partial/book/list_book_author.html' with books=author.books.all %}
+    {% endif %}
+{% endblock %}
