@@ -76,7 +76,8 @@
         "book": "Абай жолы",
         "description": "",
         "author": 1,
-        "published_at": "2022-02-06T00:00:00Z"
+        "published_at": "2022-02-06T00:00:00Z",
+        "genre": []
     }
 },
 {
@@ -86,7 +87,8 @@
         "book": "Абай жолы 2",
         "description": "",
         "author": 1,
-        "published_at": "2022-02-20T00:00:00Z"
+        "published_at": "2022-02-20T00:00:00Z",
+        "genre": []
     }
 },
 {
@@ -96,7 +98,8 @@
         "book": "Абай жолы 3",
         "description": "",
         "author": 1,
-        "published_at": "2022-02-13T00:00:00Z"
+        "published_at": "2022-02-13T00:00:00Z",
+        "genre": []
     }
 },
 {
@@ -106,7 +109,8 @@
         "book": "Абай жолы 4",
         "description": "",
         "author": 1,
-        "published_at": "2022-02-13T00:00:00Z"
+        "published_at": "2022-02-13T00:00:00Z",
+        "genre": []
     }
 },
 {
@@ -116,7 +120,117 @@
         "book": "Абай жолы 5",
         "description": "",
         "author": 2,
-        "published_at": "2022-02-13T00:00:00Z"
+        "published_at": "2022-02-13T00:00:00Z",
+        "genre": []
+    }
+},
+{
+    "model": "library.book",
+    "pk": 6,
+    "fields": {
+        "book": "Абай жолы 2",
+        "description": "",
+        "author": 2,
+        "published_at": "2022-02-20T00:00:00Z",
+        "genre": [
+            1
+        ]
+    }
+},
+{
+    "model": "library.book",
+    "pk": 7,
+    "fields": {
+        "book": "Абай жолы 2",
+        "description": "",
+        "author": 1,
+        "published_at": "2022-02-20T00:00:00Z",
+        "genre": []
+    }
+},
+{
+    "model": "library.book",
+    "pk": 8,
+    "fields": {
+        "book": "Абай жолы 2",
+        "description": "",
+        "author": 1,
+        "published_at": "2022-02-20T00:00:00Z",
+        "genre": []
+    }
+},
+{
+    "model": "library.book",
+    "pk": 9,
+    "fields": {
+        "book": "Абай жолы 2",
+        "description": "",
+        "author": 1,
+        "published_at": "2022-02-13T00:00:00Z",
+        "genre": []
+    }
+},
+{
+    "model": "library.book",
+    "pk": 10,
+    "fields": {
+        "book": "Абай жолы 2",
+        "description": "",
+        "author": 1,
+        "published_at": "2022-02-13T00:00:00Z",
+        "genre": []
+    }
+},
+{
+    "model": "library.book",
+    "pk": 11,
+    "fields": {
+        "book": "Абай жолы 2222",
+        "description": "",
+        "author": 1,
+        "published_at": "2022-02-13T00:00:00Z",
+        "genre": []
+    }
+},
+{
+    "model": "library.book",
+    "pk": 12,
+    "fields": {
+        "book": "Книга 1",
+        "description": "",
+        "author": 1,
+        "published_at": "2022-02-20T00:00:00Z",
+        "genre": [
+            1
+        ]
+    }
+},
+{
+    "model": "library.genre",
+    "pk": 1,
+    "fields": {
+        "genre": "Фантастика"
+    }
+},
+{
+    "model": "library.genre",
+    "pk": 8,
+    "fields": {
+        "genre": "Художественная литература"
+    }
+},
+{
+    "model": "library.genre",
+    "pk": 10,
+    "fields": {
+        "genre": "Роман"
+    }
+},
+{
+    "model": "library.genre",
+    "pk": 11,
+    "fields": {
+        "genre": "Наука"
     }
 },
 {
