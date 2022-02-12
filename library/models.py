@@ -22,4 +22,18 @@ class Book(models.Model):
         verbose_name='Автор',
         default=1
     )
+    genre = models.ManyToManyField(
+        'library.Genre',
+        related_name='genres',
+        blank=False,
+        default=1
+    )
+
     published_at = models.DateTimeField(null=True, blank=False)
+
+
+class Genre(models.Model):
+    genre = models.CharField(max_length=50, null=False, blank=False)
+
+    def __str__(self):
+        return '{}. {}'.format(self.pk, self.genre)
