@@ -9,11 +9,22 @@ from library.views.book_views import (ListBookView,
                                       DeleteBookView,
                                       CreateBookWithAuthor)
 
+from library.views.genre_views import (CreateGenreView,
+                                       ListGenreView,
+                                       genre_delete_view)
+
 urlpatterns = []
 
 author_urls = [
     path('authors/<int:pk>/', DetailAuthorView.as_view(), name='detail_author'),
-    path('authors/', ListAuthorView.as_view(), name='list_author')
+    path('authors/', ListAuthorView.as_view(), name='list_author'),
+]
+
+genre_urls = [
+    path('genres/', ListGenreView.as_view(), name='list_genre'),
+    path('genres/add/', CreateGenreView.as_view(), name='create_genre'),
+    path('genres/<int:pk>/delete', genre_delete_view, name='delete_genre')
+
 ]
 
 book_urls = [
@@ -27,3 +38,4 @@ book_urls = [
 
 urlpatterns += author_urls
 urlpatterns += book_urls
+urlpatterns += genre_urls
