@@ -19,4 +19,15 @@
 {% for error in form.published_at.errors %}
     <p class="invalid-feedback">{{ error }}</p>
 {% endfor %}
+<label class="{% if form.genre.errors %} is-invalid {% endif %}" for="genre">Жанр книги</label>
+{% for genre in form.genre.field.queryset %}
+    <div class="form-check form-switch">
+        <label class="form-check-label">{{ genre.genre }}</label>
+        <input class="form-check-input" id="genre"
+               name="genre" type="checkbox" {% if genre in book.genre.all %} checked {% endif %} value="{{ genre.pk }}">
+    </div>
+{% endfor %}
+{% for error in form.genre.errors %}
+    <p class="invalid-feedback" id="type">{{ error }}</p>
+{% endfor %}
 <input type="submit" class="form-control btn btn-secondary" value="{{ button_text }}">

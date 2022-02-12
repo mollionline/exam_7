@@ -10,6 +10,9 @@
             {% else %}
                 <p>Описание книги не задано</p>
             {% endif %}
+            <p>Тип: {% for genre in book.genre.all %}
+                {{ genre }} |
+            {% endfor %}
 
             <p>Год издания: {{ book.published_at|date:'d.m.Y' }}</p>
             <a class="btn btn-dark" href="{% url 'list_book' %}">Вернуться в список книг</a>

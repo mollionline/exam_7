@@ -12,8 +12,16 @@
                        href="{% url 'list_author' %}">Список авторов</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'create_book_without_author' %}">Добавить
+                    <a class="nav-link {% if request.path == '/genres/' %} active {% endif %}" aria-current="page"
+                       href="{% url 'list_genre' %}">Список жанров</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'create_book_without_author' %}">Добавить
                         книгу</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'create_genre' %}">Добавить
+                        жанр</a>
                 </li>
             </ul>
         </div>
