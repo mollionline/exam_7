@@ -1,0 +1,8 @@
+{% csrf_token %}
+<label for="genre">Наименование жанра</label>
+<input class="form-control {% if form.genre.errors %} is-invalid {% endif %}" id="genre" type="text" name="genre"
+       aria-describedby="genre" value="{{ form.genre.value|default:'' }}">
+{% for error in form.genre.errors %}
+    <p class="invalid-feedback">{{ error }}</p>
+{% endfor %}
+<input type="submit" class="form-control btn btn-secondary" value="{{ button_text }}">

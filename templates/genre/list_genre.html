@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row row-cols-1 align-items-start">
+        {% for genre in genres %}
+            <div class="col py-3">
+                <div class="card" style="border: 1px solid darkgreen;">
+                    <div class="row">
+                        <div class="col-md-8 px-3">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: darkgreen">{{ genre.genre }}</h5>
+                                <a style="color: white; text-decoration: none" class="btn btn-danger"
+                                   href='{% url 'delete_genre' genre.pk %}'>Удалить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

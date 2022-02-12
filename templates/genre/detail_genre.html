@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">Наименование жанра: {{ genre.genre }}</div>
+            <a class="btn btn-dark" href="{% url 'list_genre' %}">Вернуться в список жанров</a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Удалить
+            </button>
+
+        </div>
+
+    </div>
+{% endblock %}
