@@ -1,9 +1,8 @@
-from django.urls import reverse, reverse_lazy
-from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import DetailView
 
 from library.helpers import SearchView
-from library.models import Book, Author
-from library.forms import BookForm, SearchForm, AuthorForm
+from library.models import Author
+from library.forms import SearchForm
 
 
 class ListAuthorView(SearchView):

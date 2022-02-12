@@ -3,7 +3,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 
 from library.helpers import SearchView
-from library.models import Book, Author
+from library.models import Book, Author, Genre
 from library.forms import BookForm, SearchForm, BookWithoutAuthorForm
 
 
@@ -38,14 +38,19 @@ class CreateBookView(CreateView):
         author = get_object_or_404(Author, pk=author_pk)
         form = self.form_class(data=request.POST)
         if form.is_valid():
-            Book.objects.create(
-                **form.cleaned_data,
+            genre = form.cleaned_data.get('genre')
+            book, is_not_new = Book.objects.get_or_create(
+                book=form.cleaned_data.get('book'),
+                description=form.cleaned_data.get('description'),
+                published_at=form.cleaned_data.get('published_at'),
                 author=author
             )
+            book.genre.set(genre)
             return redirect(self.get_success_url())
         return render(request, self.template_name, context={
             'author': author,
-            'form': form
+            'form': form,
+            'genres': Genre.objects.all()
         })
 
 
